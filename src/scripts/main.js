@@ -27,6 +27,10 @@ tree.addEventListener('click', (e) => {
 
     const nestedList = eventList.querySelector('ul');
 
+    if (!nestedList) {
+      return;
+    }
+
     const isVisible = getComputedStyle(nestedList).display !== 'none';
 
     nestedList.style.display = isVisible ? 'none' : 'block';
